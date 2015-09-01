@@ -16,6 +16,10 @@
 
 @import "partials/variables";
 
+.main-title {
+	text-align: center;
+}
+
 #d3 path {
 	fill: $gray;
 	stroke: $light-gray;
