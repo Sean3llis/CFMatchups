@@ -11,19 +11,18 @@
 		}
 
 		var data = geoData;
-		var margin = 75;
-		var w = 1000 - margin;
-		var h = 1080 - margin;
+		var w = 1170;
+		var h = w/2;
 
 		CFB.svg = d3.select('#d3')
 			.append('svg')
-			.attr('width', w + margin)
-			.attr('height', h + margin)
-			.append('g')
-			.attr('class', 'map');
+			.attr('width', w)
+			.attr('height', h)
 
 
 		CFB.proj = d3.geo.albersUsa()
+		.scale(1000)
+    .translate([w / 2, h / 2])
 
 		var path = d3.geo.path().projection(CFB.proj);
 		
