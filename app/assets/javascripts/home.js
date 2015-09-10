@@ -1,7 +1,7 @@
 (function($){ $(document).ready(function(){
 	CFB = {};
 	var mapURL = '/map.json';
-	var teamsURL = '/teams';
+	var teamsURL = '/teams.json';
 	d3.json(mapURL, drawMap);
 
 	function drawMap(error, geoData){
@@ -44,7 +44,7 @@
 		}
 
 		var pin = CFB.svg.selectAll('.pin')
-			.data(teamData)
+			.data(teamData.teams)
 			.enter()
 			.append('circle', '.pin')
 			.attr('r', 12)
@@ -53,6 +53,7 @@
 				return d.color;
 			})
 			.attr('cx', function(d){
+				console.log(d);
 				var xAxis = CFB.proj([
 					d.coords.long,
 					d.coords.lat
@@ -67,7 +68,7 @@
 				return yAxis[1];
 			});
 		CFB.labels = CFB.svg.selectAll('text')
-			.data(teamData)
+			.data(teamData.teams)
 			.enter()
 			.append('text')
 			.text(function(d){

@@ -104,6 +104,16 @@ kan = Team.create(
 		long: -95.24637
 	}
 )
+tex.home_games.create(
+	home_id: 1,
+	away_id: 4,
+	time: DateTime.new(2015, 11, 22)
+)
+tex.home_games.create(
+	home_id: 1,
+	away_id: 2,
+	time: DateTime.new(2015, 10, 10)
+)
 
 
 

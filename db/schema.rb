@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150901003852) do
   create_table "games", force: :cascade do |t|
     t.integer  "home_id"
     t.integer  "away_id"
+    t.datetime "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
