@@ -1,3 +1,16 @@
 // Place all the styles related to the Teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.team-label {
+	pointer-events: none;
+}
+
+.team-group:hover {
+	cursor: pointer;
+}
+
+.team-path {
+	fill: none;
+	stroke: $light-gray;
+	stroke-width: 3;
+}

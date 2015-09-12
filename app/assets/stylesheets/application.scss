@@ -15,12 +15,13 @@
 @import "bootstrap";
 
 @import "partials/variables";
+@import "teams";
 
 .main-title {
 	text-align: center;
 }
 
-#d3 path {
+#d3 .state-path {
 	fill: $gray;
 	stroke: $light-gray;
 	stroke-width: 1;
